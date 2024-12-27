@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <button class="btn btn-success" (click)="displayParagraph()">
+      Display Details
+    </button>
+    <p *ngIf="display">{{ SecretPassword }}</p>
+    <div
+      *ngFor="let output of log"
+      [ngStyle]="{ 'background-color': output >= 5 ? 'blue' : 'white' }"
+      [ngClass]="{ 'white-text': output >= 5 }"
+    >
+      {{ output }}
+    </div>
+  </div>
+</div>
